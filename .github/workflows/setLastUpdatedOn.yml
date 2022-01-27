@@ -27,7 +27,7 @@ jobs:
           git commit -m "[Automated] README updated!"
           
       - name: Push # Push the commits
-        uses: ad-m/github-push-action@master  #pushes to the master or main branch
+        uses: ad-m/github-push-action@alpha  #pushes to the master or main branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ## This is a basic workflow to help you get started with Actions
