@@ -12,7 +12,7 @@ async function main() {
 
     const d = new Date();
     const readmeTemplateFile = (await fs.readFile("./README.md.template")).toString("utf-8");
-    const updatatedReadmeFile = readmeTemplateFile.replace("{{lastUpdatedOn}}", getDateTime(d));
+    const updatatedReadmeFile = readmeTemplateFile.replace("{{lastUpdatedOn}}", d);
     // const date = readmeTemplateFile.replace("{{lastUpdatedOn}}", d.toString().replace("GMT+0530 (India Standard Time)","IST"));
     await fs.writeFile("./README.md", updatatedReadmeFile);
     // const readmeFile = (await fs.readFile('./README.md')).toString("utf-8");
